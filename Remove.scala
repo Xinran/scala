@@ -24,4 +24,28 @@ object Remove extends App {
         }
         a
     }
+    /**
+     Without using a new structure
+    */
+    def moveZeroes2(nums: Array[Int]): Unit = {
+        val s = nums.size;
+        var i = 0;
+        if(s<=1) return nums;
+        var j = 1;
+        while(i < s && j < s) {
+            if(nums(i) == 0 && nums(j) != 0) {
+                nums(i) = nums(j);
+                nums(j) = 0;
+                j += 1;
+                i += 1;
+            }
+            else if(nums(i) == 0 && nums(j) == 0) {
+                j += 1;
+            }
+            else {
+                i += 1;
+                j += 1;
+            }
+        }
+    }
  }
