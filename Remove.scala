@@ -5,7 +5,7 @@
 
 //Input: [0,1,0,3,12]
 //Output: [1,3,12,0,0]
-
+//https://leetcode.com/problems/move-zeroes/
 object Remove extends App {
     println("Hello, World!")
     moveZeroes(Array(0,4,3,5,0,0,1)).foreach {
